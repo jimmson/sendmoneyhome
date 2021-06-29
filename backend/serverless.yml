@@ -1,0 +1,13 @@
+service: sendmoneyhome
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: eu-west-2
+
+functions:
+  GetBalance:
+    handler: index.GetBalance
+    events:
+      - http: ANY /
